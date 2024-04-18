@@ -31,7 +31,7 @@ M.__get_change_version_command = function(dependency_name, version)
     end
 
     if config.options.package_manager == constants.PACKAGE_MANAGERS.pnpm then
-        return "pnpm add " .. dependency_name .. "@" .. version
+        return "pnpm add --lockfile-only " .. dependency_name .. "@" .. version
     end
 end
 
